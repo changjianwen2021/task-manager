@@ -20,6 +20,7 @@
     "mongodb": "^4.9.0",
     "nodemon": "^2.0.19",
     "normalize.css": "^8.0.1",
+    "sqlite3": "^5.1.7",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },

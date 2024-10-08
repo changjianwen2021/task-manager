@@ -43,7 +43,8 @@ export default {
       task: null,
       loading: {
         submit: false,
-      }
+      },
+      title: [{required: true, message: '请输入任务标题', trigger: 'blur'}]
     }
   },
   methods: {
@@ -62,6 +63,8 @@ export default {
       })
     },
     async submitNewTask () {
+      console.log(this.task.title)
+      
       await this.$refs.nForm.validate()
       this.loading.submit = true
       await axios.post('/task/upsert', this.task).finally(() => {
